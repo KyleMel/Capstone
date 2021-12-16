@@ -1,5 +1,8 @@
 # Cooking Recipe Website
 
+__This repo contains only the back end of the application  
+please see CapstoneReactJS repo for front end.__
+
 ## Design by: Kyle Melton
 
 __Summary:__ A webpage to write, edit, store, and organize cooking recipes.\
