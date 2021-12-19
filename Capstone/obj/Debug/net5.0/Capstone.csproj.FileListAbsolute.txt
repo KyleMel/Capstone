@@ -1,0 +1,7 @@
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.csproj.AssemblyReference.cache
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.GeneratedMSBuildEditorConfig.editorconfig
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.AssemblyInfoInputs.cache
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.AssemblyInfo.cs
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.csproj.CoreCompileInputs.cache
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.MvcApplicationPartsAssemblyInfo.cs
+C:\Develop\CapstoneAPI\Capstone\obj\Debug\net5.0\Capstone.MvcApplicationPartsAssemblyInfo.cache
