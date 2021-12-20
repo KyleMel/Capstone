@@ -1,12 +1,16 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Capstone
+namespace Capstone.Models
 {
-  public class Recipes { 
+  public class Recipes
+  {
     public int Id { get; set; }
     public string Name { get; set; }
     public string Ingrediants { get; set; }
     public string Description { get; set; }
 
-    }
+  }
 }
