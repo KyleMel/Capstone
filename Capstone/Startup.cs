@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer;
 using Capstone.Models;
 
 
@@ -24,7 +23,7 @@ namespace Capstone
     {
       services.AddControllers();
       services.AddDbContext<RecipesContext>(opt =>
-        opt.UseSqlServer("MyConnection"));
+        opt.UseSqlServer(Configuration.GetConnectionString("MyConnection")));
     }
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

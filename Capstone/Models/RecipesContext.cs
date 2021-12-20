@@ -8,8 +8,9 @@ namespace Capstone.Models
     public RecipesContext(DbContextOptions<RecipesContext> options)
       : base(options)
     {
+      Database.EnsureCreated();
     }
 
-    public DbSet<Recipes> Recipe { get; set; } = null!;
+    public DbSet<Recipes> Recipes { get; set; } = null!;
   }
 }

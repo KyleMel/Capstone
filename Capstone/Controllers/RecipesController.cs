@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Capstone.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("api/Recipes")]
   [ApiController]
   public class RecipesController : ControllerBase
   {
@@ -16,19 +16,18 @@ namespace Capstone.Controllers
     public RecipesController(RecipesContext context)
     {
       _context = context;
-      _context.Database.EnsureCreated();
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Recipes>>> GetTodoChores()
+    public async Task<ActionResult<IEnumerable<Recipes>>> GetRecipe()
     {
-      return await _context.Recipe.ToListAsync();
+      return await _context.Recipes.ToListAsync();
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Recipes>> GetRecipe(int id)
+    public async Task<ActionResult<Recipes>> GetRecipes(int id)
     {
-      var recipe = await _context.Recipe.FindAsync(id);
+      var recipe = await _context.Recipes.FindAsync(id);
 
       if (recipe == null)
       {
@@ -72,7 +71,7 @@ namespace Capstone.Controllers
     [HttpPost]
     public async Task<ActionResult<Recipes>> PostRecipe(Recipes recipe)
     {
-      _context.Recipe.Add(recipe);
+      _context.Recipes.Add(recipe);
       await _context.SaveChangesAsync();
 
       return CreatedAtAction(nameof(GetRecipe), new { id = recipe.Id }, recipe);
@@ -81,13 +80,13 @@ namespace Capstone.Controllers
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteRecipe(int id)
     {
-      var todoChore = await _context.Recipe.FindAsync(id);
-      if (todoChore == null)
+      var recipe = await _context.Recipes.FindAsync(id);
+      if (recipe == null)
       {
         return NotFound();
       }
 
-      _context.Recipe.Remove(todoChore);
+      _context.Recipes.Remove(recipe);
       await _context.SaveChangesAsync();
 
       return NoContent();
@@ -95,7 +94,7 @@ namespace Capstone.Controllers
 
     private bool RecipeExists(int id)
     {
-      return _context.Recipe.Any(e => e.Id == id);
+      return _context.Recipes.Any(e => e.Id == id);
     }
   }
 }
