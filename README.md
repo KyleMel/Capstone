@@ -1,5 +1,7 @@
 # Cooking Recipe Website
 
+__Incomplete! API controller currently has bug preventing it from building__
+
 __This repo contains only the back end of the application  
 please see CapstoneReactJS repo for front end.__
 
